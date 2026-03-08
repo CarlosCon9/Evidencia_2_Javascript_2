@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>API DE LIBROS</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Aquí se mostrarán los libros obtenidos de la API> -->
+      <section>
+        <h2>Crear Libro</h2>
+        <form id="form-libro">
+          <input type="text" id="titulo" placeholder="Título" required />
+          <input type="text" id="autor" placeholder="Autor" required />
+          <input
+            type="number"
+            id="paginas"
+            placeholder="No. de páginas"
+            required
+          />
+          <button type="submit">Crear Libro</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Listado de Libros</h2>
+        <ul id="lista-libros"></ul>
+      </section>
+
+      <!-- Actualizar libro -->
+      <section>
+        <h2>Actualizar libro</h2>
+        <form id="form-actualizar">
+          <input
+            type="text"
+            id="id-actualizar"
+            placeholder="ID del libro"
+            required
+          />
+          <input
+            type="text"
+            id="nuevo-titulo"
+            placeholder="Nuevo título"
+            required
+          />
+          <input
+            type="text"
+            id="nuevo-autor"
+            placeholder="Nuevo autor"
+            required
+          />
+          <input
+            type="number"
+            id="nuevo-paginas"
+            placeholder="Nuevas paginas"
+            required
+          />
+          <button type="submit">Actualizar</button>
+        </form>
+        <div id="resultado-actualizar"></div>
+      </section>
+
+      <!-- Buscar Libros por nombre -->
+      <section>
+        <h2>Buscar Libro</h2>
+        <form id="form-buscar">
+          <input
+            type="text"
+            id="titulo-buscar"
+            placeholder="Titulo del libro"
+            required
+          />
+          <button type="submit">Buscar</button>
+        </form>
+        <div id="resultado-buscar"></div>
+      </section>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
